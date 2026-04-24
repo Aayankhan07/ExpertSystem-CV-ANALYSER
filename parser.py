@@ -56,7 +56,8 @@ def parse_image(file_obj) -> str:
     """
     text = ""
     try:
-        # Common Windows installation path for Tesseract
+        # On Windows, we often need to specify the path to the Tesseract executable
+        # On Linux (Streamlit Cloud), 'tesseract' is usually in the PATH if installed via packages.txt
         tesseract_path = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
         if os.path.exists(tesseract_path):
             pytesseract.pytesseract.tesseract_cmd = tesseract_path
