@@ -4,3 +4,4 @@ python-docx
 flashtext
 pytesseract
 Pillow
+pandas
